@@ -1,16 +1,22 @@
 package networkecho;
 
+import java.io.PrintWriter;
 import java.net.Socket;
 
 public interface SharedInterface {
     Room createRoom(String name);
-    Person createPerson(String name, Socket socket);
-    void joinRoom(Room r, Person p);
-    void deleteRoom(Room r);
-    void deletePerson(Person p);
-    void broadcast(String msg, Room room);
-    void whisper(String msg, Room room, String toName);
-    void kick(String target_name, Room room, Person admin);
+    Room getRoomByName(String name);
+    Room getRoomByIndex(int i);
+    Room deleteRoom(String roomName);
+    Person getPersonByName(String name);
+    Person createPerson(String name, Socket socket, String roomName);
+    Person deletePerson(String personName);
+    void joinRoom(String roomName, Person person);
+    void broadcast(PrintWriter w, String msg, String roomName, String person);
+    void whisper(String msg, String roomName, String toName);
+    void kick(String target_name, String roomName, String userName);
     String getRoomList();
-    String getPersonList();
+    String getPersonList(String roomName);
+    void switchRoom(String from, String to, String personName);
+    int getNumberOfRooms();
 }

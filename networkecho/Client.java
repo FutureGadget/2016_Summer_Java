@@ -17,14 +17,24 @@ public class Client {
             rd = new BufferedReader(new InputStreamReader(s.getInputStream()));
             rdStdin = new BufferedReader(new InputStreamReader(System.in));
             w = new PrintWriter(s.getOutputStream());
-            String str = null;
+
+            // Create reader thread
             Thread reader = new Thread(new ClientReader(s));
             reader.start();
+
             while (true) {
-                str = rdStdin.readLine();
+                String str = rdStdin.readLine();
                 w.println(str);
                 w.flush();
-                if (str.equals("/exit")) break;
+                if (str.equals("/exit")) {
+                    reader.interrupt();
+                    try {
+                        reader.join(); // wait until the child thread is closed.
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();

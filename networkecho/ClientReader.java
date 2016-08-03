@@ -20,9 +20,14 @@ public class ClientReader implements Runnable{
     public void run() {
         String s;
         try {
-            while (!(s = rd.readLine()).equals("/exit")) {
+            while (!Thread.currentThread().isInterrupted()) {
+                s = rd.readLine();
+                if (s.equals("/exit")) {
+                    break;
+                }
                 System.out.println(s);
             }
+            rd.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
