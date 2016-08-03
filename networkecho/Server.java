@@ -15,7 +15,7 @@ public class Server {
                 Thread serviceThread = new Thread(new EchoServer(s));
                 serviceThread.start();
             }
-            System.out.println("Server is closed.");
+            System.out.println("ConnectionServer is closed.");
         } catch (IOException e) {
             e.printStackTrace();
         }

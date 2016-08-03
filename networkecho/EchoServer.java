@@ -21,38 +21,38 @@ public class EchoServer implements Runnable{
         }
     }
 
-    private void sendMessageToClient(String msg, boolean printLn) {
+    private void sendMessageToClient(String msg) {
         w.println(msg);
         w.flush();
     }
 
     private void getUserInfo(BufferedReader rd) {
         try {
-            sendMessageToClient("이름: ", false);
+            sendMessageToClient("이름: ");
             currentPerson = rd.readLine();
             boolean done = false;
             while (!done) {
-                sendMessageToClient("1. 방 만들기\n2. 방 들어가기\n 선택: ", false);
+                sendMessageToClient("1. 방 만들기\n2. 방 들어가기\n 선택: ");
                 int op = Integer.parseInt(rd.readLine());
                 switch (op) {
                     case 1:
-                        sendMessageToClient("개설할 방 이름: ", false);
+                        sendMessageToClient("개설할 방 이름: ");
                         currentRoom = rd.readLine();
                         ChatSharedData.getInstance().createRoom(currentRoom);
                         ChatSharedData.getInstance().createPerson(currentPerson, socket, currentRoom);
-                        sendMessageToClient("방이 만들어졌습니다." + "(" + currentRoom + ")", true);
+                        sendMessageToClient("방이 만들어졌습니다." + "(" + currentRoom + ")");
                         done = true;
                         break;
                     case 2:
                         if (ChatSharedData.getInstance().getNumberOfRooms() == 0) {
-                            sendMessageToClient("개설된 방이 없습니다.", true);
+                            sendMessageToClient("개설된 방이 없습니다.");
                             break;
                         } else {
-                            sendMessageToClient(ChatSharedData.getInstance().getRoomList(), true);
-                            sendMessageToClient("들어갈 방 번호 :", false);
+                            sendMessageToClient(ChatSharedData.getInstance().getRoomList());
+                            sendMessageToClient("들어갈 방 번호 :");
                             currentRoom = ChatSharedData.getInstance().getRoomByIndex(Integer.parseInt(rd.readLine())).getName();
                             ChatSharedData.getInstance().createPerson(currentPerson, socket, currentRoom);
-                            sendMessageToClient("방에 입장하였습니다." + "(" + currentRoom + ")", true);
+                            sendMessageToClient("방에 입장하였습니다." + "(" + currentRoom + ")");
                         }
                         done = true;
                         break;
@@ -78,7 +78,7 @@ public class EchoServer implements Runnable{
                 s = rd.readLine();
                 if (s.equals("/exit")) {
                     try {
-                        sendMessageToClient(s, false);
+                        sendMessageToClient(s);
                         Thread.sleep(500);
                         break;
                     } catch (InterruptedException e) {

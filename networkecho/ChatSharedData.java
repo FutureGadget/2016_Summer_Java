@@ -127,7 +127,7 @@ public class ChatSharedData implements SharedInterface {
         }
         String roomList = "방 목록: " + "\n";
         for (Room r : rooms) {
-            roomList += ((num++) + r.getName() + "\n");
+            roomList += ((num++) + ". " + r.getName() + "\n");
         }
         return roomList;
     }

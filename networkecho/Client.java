@@ -13,7 +13,7 @@ public class Client {
         BufferedReader rdStdin = null;
         PrintWriter w = null;
         try {
-            s = new Socket("localhost", 50000); // Server IP + Server Port 로 Socket 생성
+            s = new Socket("localhost", 50000); // ConnectionServer IP + ConnectionServer Port 로 Socket 생성
             rd = new BufferedReader(new InputStreamReader(s.getInputStream()));
             rdStdin = new BufferedReader(new InputStreamReader(System.in));
             w = new PrintWriter(s.getOutputStream());
