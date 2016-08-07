@@ -126,7 +126,11 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="C:\Users\danwoo\2016_Summer_Java\javaweb\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\danwoo\2016_Summer_Java\javaweb\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\webproject" path="/hello" reloadable="true" source="org.eclipse.jst.jee.server:webproject"/></Host>
+      <Context docBase="C:\Users\danwoo\2016_Summer_Java\javaweb\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\danwoo\2016_Summer_Java\javaweb\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\dbtest" path="/user" reloadable="true" source="org.eclipse.jst.jee.server:dbtest">
+    <!-- Default set of monitored resources -->
+	<WatchedResource>WEB-INF/web.xml</WatchedResource>
+	<Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" name="jdbc/mySQLDB" password="mojo1821" type="javax.sql.DataSource" url="jdbc:mysql://127.0.0.1:3306/library?characterEncoding=UTF-8" username="danwoo"/>
+</Context></Host>
     </Engine>
   </Service>
 </Server>

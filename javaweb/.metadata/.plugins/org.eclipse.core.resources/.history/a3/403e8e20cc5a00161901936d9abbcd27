@@ -1,0 +1,9 @@
+package bulletinboard;
+
+public class ItemEntity {
+	private int articleNum;
+	private String articleTitle;
+    private String articleContent;
+    private String articleWriter;
+    private String articleDat;
+}

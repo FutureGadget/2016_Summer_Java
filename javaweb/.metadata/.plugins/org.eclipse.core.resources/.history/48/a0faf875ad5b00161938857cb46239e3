@@ -1,0 +1,22 @@
+package dao;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import common.DBTemplate;
+import entity.User;
+
+public class UserDAO {
+	public String getPassword(User user) {
+		try {
+			Connection conn = DBTemplate.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement("SELECT upw FROM user_tbl WHERE uid=?");
+			pstmt.setString(1, user.getUid());
+			ResultSet rs = pstmt.executeQuery();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+}

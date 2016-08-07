@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>게시판</h2>
+<ol>
+<li><a href="write.html">글 열람하기</a></li>
+<li>글 작성하기</li>
+<li>글 삭제하기</li>
+<li>글 수정하기</li>
+</ol>
+</body>
+</html>
