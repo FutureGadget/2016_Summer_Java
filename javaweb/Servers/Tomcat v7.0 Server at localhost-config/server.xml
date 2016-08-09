@@ -62,7 +62,8 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL HTTP/1.1 Connector on port 8080
     -->
-    <Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
+    <!-- GET 방식 요청에 대한 URIEncoding 설정. -->
+    <Connector URIEncoding="UTF8" connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -82,7 +83,8 @@
     -->
 
     <!-- Define an AJP 1.3 Connector on port 8009 -->
-    <Connector port="8009" protocol="AJP/1.3" redirectPort="8443"/>
+    <!-- Get 방식 요청에 대한 URIEncoding을 설정해줄 수 있다. -->
+    <Connector URIEncoding="UTF8" port="8009" protocol="AJP/1.3" redirectPort="8443"/>
 
 
     <!-- An Engine represents the entry point (within Catalina) that processes
@@ -126,7 +128,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="dbtest" path="/user" reloadable="true" source="org.eclipse.jst.jee.server:dbtest"/></Host>
+      <Context docBase="dbtest" path="/user" reloadable="true" source="org.eclipse.jst.jee.server:dbtest"/><Context docBase="BookFinal" path="/book" reloadable="true" source="org.eclipse.jst.jee.server:BookFinal"/></Host>
     </Engine>
   </Service>
 </Server>

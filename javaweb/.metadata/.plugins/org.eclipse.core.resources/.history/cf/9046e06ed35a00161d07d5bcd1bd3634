@@ -1,7 +1,0 @@
-package dao;
-import java.sql.Connection;
-
-public class ItemDAO {
-	private Connection conn = common.DBTemplate.getConnection();
-	
-}

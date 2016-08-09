@@ -1,0 +1,21 @@
+package dao.book;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.ArrayList;
+
+import common.DBTemplate;
+import entity.book.BookEntity;
+
+public class BookDAO {
+	ArrayList<BookEntity> queryBookByName(String bookName) {
+		Connection conn = DBTemplate.getConnection();
+		try {
+			String sql = "SELECT * FROM books WHERE bname LIKE ?";
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, "%"+bookName+"%");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,9 @@
+package service.user;
+
+import entity.user.UserEntity;
+
+public class UserService {
+	public boolean login(UserEntity entity) {
+		return true;
+	}
+}

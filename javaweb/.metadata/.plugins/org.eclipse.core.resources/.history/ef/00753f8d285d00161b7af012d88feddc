@@ -1,0 +1,43 @@
+package entity.book;
+
+public class BookEntity {
+	private String bisdn;
+	private String btitle;
+	private String bprice;
+	private String bimgurl;
+	private String bauthor;
+	public BookEntity(String bisbn, String btitle, String bauthor, String bprice, String bimgurl) {
+		
+	}
+	public String getBisdn() {
+		return bisdn;
+	}
+	public void setBisdn(String bisdn) {
+		this.bisdn = bisdn;
+	}
+	public String getBtitle() {
+		return btitle;
+	}
+	public void setBtitle(String btitle) {
+		this.btitle = btitle;
+	}
+	public String getBprice() {
+		return bprice;
+	}
+	public void setBprice(String bprice) {
+		this.bprice = bprice;
+	}
+	public String getBimgurl() {
+		return bimgurl;
+	}
+	public void setBimgurl(String bimgurl) {
+		this.bimgurl = bimgurl;
+	}
+	public String getBauthor() {
+		return bauthor;
+	}
+	public void setBauthor(String bauthor) {
+		this.bauthor = bauthor;
+	}
+	
+}

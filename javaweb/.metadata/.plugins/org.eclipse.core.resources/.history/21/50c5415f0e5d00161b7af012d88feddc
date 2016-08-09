@@ -1,0 +1,9 @@
+package dao.user;
+
+import entity.user.UserEntity;
+
+public class UserDAO {
+	public boolean select(UserEntity entity) {
+		
+	}
+}

@@ -1,0 +1,18 @@
+package dao.book;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+
+import common.DBTemplate;
+import entity.book.BookEntity;
+
+public class BookDAO {
+	ArrayList<BookEntity> queryBookByName(String bookName) {
+		Connection conn = DBTemplate.getConnection();
+		try {
+			conn.prepareStatement();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

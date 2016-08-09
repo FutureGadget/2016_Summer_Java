@@ -1,0 +1,11 @@
+package service.book;
+
+import entity.book.BookEntity;
+import java.util.ArrayList;
+
+public class BookService {
+	public ArrayList<BookEntity> searchByKeyword(String bookName) {
+		BookDAO dao = new BookDAO();
+		
+	}
+}

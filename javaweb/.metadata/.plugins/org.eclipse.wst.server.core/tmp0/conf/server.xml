@@ -62,7 +62,8 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL HTTP/1.1 Connector on port 8080
     -->
-    <Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
+    <!-- GET 방식 요청에 대한 URIEncoding 설정. -->
+    <Connector URIEncoding="UTF8" connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -82,7 +83,8 @@
     -->
 
     <!-- Define an AJP 1.3 Connector on port 8009 -->
-    <Connector port="8009" protocol="AJP/1.3" redirectPort="8443"/>
+    <!-- Get 방식 요청에 대한 URIEncoding을 설정해줄 수 있다. -->
+    <Connector URIEncoding="UTF8" port="8009" protocol="AJP/1.3" redirectPort="8443"/>
 
 
     <!-- An Engine represents the entry point (within Catalina) that processes
@@ -127,6 +129,10 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
       <Context docBase="C:\Users\danwoo\2016_Summer_Java\javaweb\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\danwoo\2016_Summer_Java\javaweb\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\dbtest" path="/user" reloadable="true" source="org.eclipse.jst.jee.server:dbtest">
+    <!-- Default set of monitored resources -->
+	<WatchedResource>WEB-INF/web.xml</WatchedResource>
+	<Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" name="jdbc/mySQLDB" password="mojo1821" type="javax.sql.DataSource" url="jdbc:mysql://127.0.0.1:3306/library?characterEncoding=UTF-8" username="danwoo"/>
+</Context><Context docBase="C:\Users\danwoo\2016_Summer_Java\javaweb\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\BookFinal" path="/book" reloadable="true" source="org.eclipse.jst.jee.server:BookFinal">
     <!-- Default set of monitored resources -->
 	<WatchedResource>WEB-INF/web.xml</WatchedResource>
 	<Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" name="jdbc/mySQLDB" password="mojo1821" type="javax.sql.DataSource" url="jdbc:mysql://127.0.0.1:3306/library?characterEncoding=UTF-8" username="danwoo"/>

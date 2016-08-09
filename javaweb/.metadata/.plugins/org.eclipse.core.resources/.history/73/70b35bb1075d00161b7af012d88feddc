@@ -1,0 +1,61 @@
+package controller.user;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import entity.user.UserEntity;
+import service.user.UserService;
+
+/**
+ * Servlet implementation class loginServlet
+ */
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public LoginServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 1.한글처리
+		// post 방식인 경우에만 사용할 수 있어요!
+		request.setCharacterEncoding("UTF8");
+		// 2. 사용자로부터 넘어온 데이터를 받아요
+		String id = request.getParameter("inputId");
+		String pw = request.getParameter("inputPassword");
+		// 3. 로직처리
+		UserService service = new UserService();
+		// user 에 대한 Entity를 만들어서 인자로 이용.
+		UserEntity entity = new UserEntity();
+		entity.setUid(id);
+		entity.setUpw(pw);
+		boolean result = service.login(entity);
+		if (result) {
+			
+		} else {
+			
+		}
+	}
+
+}

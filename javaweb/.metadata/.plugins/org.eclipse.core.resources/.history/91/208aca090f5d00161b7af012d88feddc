@@ -1,0 +1,17 @@
+package dao.user;
+
+import common.DBTemplate;
+import entity.user.UserEntity;
+import java.sql.*;
+
+public class UserDAO {
+	// DBCP 를 사용할 것.
+	// 1. context.xml를 WebContent 아래의 META-INF에 위치시킨다.
+	// 2. username, password, url 수정
+	// 3. DBTemplate.java 파일을 common package에 위치시킨다.
+	public boolean select(UserEntity entity) {
+		Connection conn = DBTemplate.getConnection();
+		String sql = "SELECT uid,upw,uname,uemail FROM user_tbl WHERE uid = ? and upw = ?";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+	}
+}
