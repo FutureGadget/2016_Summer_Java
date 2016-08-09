@@ -1,7 +1,0 @@
-package dao.book;
-
-public class BookDAO {
-	ArrayList<BookEntity> queryBookByName(String bookName) {
-		
-	}
-}

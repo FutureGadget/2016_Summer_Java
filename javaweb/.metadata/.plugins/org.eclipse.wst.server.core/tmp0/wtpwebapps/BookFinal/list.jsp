@@ -50,12 +50,12 @@
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h2 class="sub-header">도서목록</h2>
-          <form action="addCart" method="post">
+          <form method="post" action="addCart">
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>선택</th>
+               	  <th>선택</th>
                   <th>책 이미지</th>
                   <th>책 제목</th>
                   <th>책 저자</th>
@@ -72,7 +72,7 @@
               	for (BookEntity e : list) {
               %>
               	<tr>
-              		<td><input type="checkbox" name="checkbox" value="<%= e.getBisbn() %>"></td>
+              		<td><input type="checkbox" name="check" value="<%= e.getBisbn()%>"></td>
               		<td><img src="<%= e.getBimgurl()%>"></td>
               		<td><%= e.getBtitle()%></td>
               		<td><%= e.getBauthor()%></td>
@@ -85,7 +85,7 @@
               </tbody>
             </table>
           </div>
-          <input type="submit" value="장바구니에 담기">
+          <button type="submit">장바구니에 담기</button>
           </form>
         </div>
       </div>

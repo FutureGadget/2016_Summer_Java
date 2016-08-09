@@ -12,6 +12,6 @@ public class BookService {
 	}
 	public ArrayList<BookEntity> getBookListByISBNs(String[] isbns) {
 		BookDAO dao = new BookDAO();
-		return dao.queryBooksByISBNs(isbns);
+		return dao.queryBookByISBNs(isbns);
 	}
 }
