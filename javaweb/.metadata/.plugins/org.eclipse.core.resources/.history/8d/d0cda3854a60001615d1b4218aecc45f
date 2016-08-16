@@ -1,0 +1,8 @@
+package Entity;
+
+public class BookEntity {
+
+	private String btitle;
+	private String 
+
+}

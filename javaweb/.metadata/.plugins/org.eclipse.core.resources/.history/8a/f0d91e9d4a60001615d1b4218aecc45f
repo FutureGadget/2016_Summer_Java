@@ -1,0 +1,10 @@
+package Entity;
+
+public class BookEntity {
+
+	private String btitle;
+	private String bprice;
+	private String bimage;
+	private String bauthor;
+	private String bisbn;
+}

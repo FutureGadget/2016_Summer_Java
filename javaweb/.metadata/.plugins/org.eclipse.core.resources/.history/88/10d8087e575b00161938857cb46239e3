@@ -1,7 +1,0 @@
-package service;
-
-public class UserService {
-	public boolean authenticate(String username, String password) {
-		
-	}
-}

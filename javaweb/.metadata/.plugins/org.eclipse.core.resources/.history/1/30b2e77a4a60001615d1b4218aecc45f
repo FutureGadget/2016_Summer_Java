@@ -1,0 +1,9 @@
+package Entity;
+
+public class BookEntity {
+
+	public BookEntity() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

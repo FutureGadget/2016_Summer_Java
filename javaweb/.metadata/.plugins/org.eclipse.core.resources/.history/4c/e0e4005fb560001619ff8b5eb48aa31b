@@ -1,0 +1,48 @@
+package dao.book;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class BookDAO {
+	public void removeBookByISBN(Connection conn, String isbn) {
+		String sql = "delete FROM books WHERE bisbn = ?";
+		PreparedStatement pstmt = null;
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, isbn);
+			int result = pstmt.executeUpdate();
+			System.out.println(result);
+			pstmt.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public String getBooksJSONByKeyword(Connection conn, String keyword) {
+		String sql = "SELECT bisbn, btitle, bprice, bauthor, bimgurl FROM books WHERE btitle LIKE ?";
+		JSONArray array = new JSONArray();
+		PreparedStatement pstmt = null;
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, "%"+keyword+"%");
+			ResultSet rs = pstmt.executeQuery();
+			while(rs.next()) {
+				JSONObject obj = new JSONObject();
+				obj.put("bisbn", rs.getString("bisbn"));
+				obj.put("btitle", rs.getString("btitle"));
+				obj.put("bauthor", rs.getString("bauthor"));
+				obj.put("bprice", rs.getString("bprice"));
+				obj.put("bimgurl", rs.getString("bimgurl"));
+				array.add(obj);
+			}
+			rs.close();
+			pstmt.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return array.toJSONString();
+	}
+}

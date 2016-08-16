@@ -1,0 +1,16 @@
+$.ajax({
+	async : false,
+	type : "GET",
+	dataType : "json",
+	url : "http://localhost:8080/ajax/ajaxCall",
+	timeout : 1000,
+	success : function(data) {
+		$("#myDiv").text("이름은 : " + data.name);
+	},
+	error : function() {
+		
+	},
+	complete : function() {
+		
+	}
+});

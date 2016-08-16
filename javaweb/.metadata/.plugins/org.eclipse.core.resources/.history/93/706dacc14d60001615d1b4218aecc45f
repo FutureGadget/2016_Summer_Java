@@ -1,0 +1,14 @@
+package service.book;
+
+import dao.book.BookDAO;
+
+public class BookService {
+	public void removeBookByISBN(String isbn) {
+		BookDAO dao = new BookDAO();
+		dao.removeBookByISBN(isbn);
+	}
+	public String getBooksByKeyword(String keyword) {
+		BookDAO dao = new BookDAO();
+		return dao.getBooksJSONByKeyword(keyword);
+	}
+}

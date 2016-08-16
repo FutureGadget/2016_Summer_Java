@@ -1,0 +1,20 @@
+package service.book;
+
+import java.sql.Connection;
+
+import common.DBTemplate;
+import dao.book.BookDAO;
+
+public class BookService {
+	public void removeBookByISBN(String isbn) {
+		Connection conn = DBTemplate.getConnection();
+		BookDAO dao = new BookDAO();
+		dao.removeBookByISBN(conn, isbn);
+		conn.close();
+	}
+	public String getBooksByKeyword(String keyword) {
+		Connection conn = DBTemplate.getConnection();
+		BookDAO dao = new BookDAO();
+		return dao.getBooksJSONByKeyword(conn, keyword);
+	}
+}

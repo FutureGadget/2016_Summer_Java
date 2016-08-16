@@ -1,9 +1,0 @@
-package entity.book;
-
-public class BookEntity {
-	private String bisdn;
-	private String btitle;
-	private String bprice;
-	private String bimgurl;
-	private String bauthor;
-}
