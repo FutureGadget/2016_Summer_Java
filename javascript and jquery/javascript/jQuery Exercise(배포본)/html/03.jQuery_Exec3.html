@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>jQuery 연습문제</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="../js/03.jQuery_Exec3.js"></script>
+    <style>
+        #targetDiv {
+            width : 300px;
+            height : 100px;
+            background-color : yellow;
+            padding : 20px 20px;
+            margin : 30px;
+        }
+        #innerDiv {
+            width : 200px;
+            height : 30px;
+            background-color : greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>아래의 버튼 클릭 시 div 영역안의 div 영역을 복사하여 바로 아래에 붙이세요.</h1>
+    <input type="button" value="복사하기" onclick="copyDiv()">
+    <div id="targetDiv">
+        <div id="innerDiv">이 영역을 복사</div>
+    </div>
+</body>
+</html>

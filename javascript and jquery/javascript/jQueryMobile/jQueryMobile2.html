@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- jQuery Mobile 사용하기 위해서 CDN 추가 -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+    <!-- 모바일 환경에 최적화 하기 위해 확대,축소기능 제한 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+    maximum-scale=1.0, minimum-scale=1.0,
+    user-scalable=no">
+
+    <link rel="stylesheet" href="css/a.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile.icons.min.css">
+</head>
+<body>
+<!-- 페이지 하나는 home div로 감싸줘야 한다. data-role 은 page로 해 줘야 한다. (==home page) -->
+<div id="home" data-role="page">
+    <!-- 하나의 페이지 내부는 header, content, footer로 구성한다. data-role을 설정해주면 된다. -->
+    <div data-role="header" data-position="fixed"><!-- header와 footer를 고정하기 위해서 data-positon을 fixed로 준다. -->
+        <h1>Header</h1>
+    </div>
+    <div data-role="content">
+        <h1>첫 번째 Content</h1>
+
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#" data-icon="home">홈페이지</a></li>
+                <li><a href="#" data-icon="gear">설정</a></li>
+                <li><a href="#" data-icon="star">찾아오시는길</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</body>
+</html>

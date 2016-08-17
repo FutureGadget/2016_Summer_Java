@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>jQuery 연습문제</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <style>
+        .targetDiv {
+            width : 100px;
+            height : 100px;
+            background-color : yellowgreen;
+            padding : 5px;
+            margin : 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>아래의 버튼 클릭 시 자식을 가지지 않은 모든 DIV를 삭제하세요</h1>
+    <input type="button" value="자식이 없는 Div 삭제" onclick="deleteDiv()">
+    <div class="targetDiv">
+        <img src="../img/yuna.png" width="70">
+    </div>
+    <div class="targetDiv">
+    </div>
+    <div class="targetDiv">
+        <img src="../img/iu.png" width="70">
+    </div>
+    <div class="targetDiv">
+    </div>
+
+    <script src="../js/15.jQuery_Exec15.js"></script>
+</body>
+</html>

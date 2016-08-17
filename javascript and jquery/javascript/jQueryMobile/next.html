@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+</head>
+<body>
+<!-- 페이지 하나는 home div로 감싸줘야 한다. data-role 은 page로 해 줘야 한다. (==home page) -->
+<div id="home" data-role="page">
+    <!-- 하나의 페이지 내부는 header, content, footer로 구성한다. data-role을 설정해주면 된다. -->
+    <div data-role="header" data-position="fixed"><!-- header와 footer를 고정하기 위해서 data-positon을 fixed로 준다. -->
+        <h1>두 번째 Header</h1>
+
+        <!-- 뒤로가기 버튼 -->
+        <a href="#" data-rel="back" data-transition="slide" class="ui-btn">이전페이지</a>
+    </div>
+    <div data-role="content">
+        <h1>두 번째 Content</h1>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <h1>두 번째 footer</h1>
+    </div>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</body>
+</html>

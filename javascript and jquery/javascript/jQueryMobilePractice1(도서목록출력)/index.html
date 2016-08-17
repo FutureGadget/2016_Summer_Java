@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- jQuery Mobile 사용하기 위해서 CDN 추가 -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+    <!-- 모바일 환경에 최적화 하기 위해 확대,축소기능 제한 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+    maximum-scale=1.0, minimum-scale=1.0,
+    user-scalable=no">
+
+
+
+
+</head>
+<body>
+<div id="home" data-role="page">
+    <div data-role="header" data-position="fixed">
+        <h2>도서 검색</h2>
+    </div>
+    <div data-role="header">
+        <div data-role="navbar">
+            <input type="search" name="search" id="search">
+        </div>
+    </div>
+    <div data-role="content">
+        <ul id="result" data-role="listview" data-inset="true" data-filter="true" data-split-icon="delete">
+        </ul>
+    </div>
+    <div data-role="footer" data-position="fixed">
+
+    </div>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="js/script.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</body>
+</html>

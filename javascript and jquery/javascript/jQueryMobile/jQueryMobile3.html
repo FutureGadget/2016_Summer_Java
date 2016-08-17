@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- jQuery Mobile 사용하기 위해서 CDN 추가 -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+    <!-- 모바일 환경에 최적화 하기 위해 확대,축소기능 제한 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+    maximum-scale=1.0, minimum-scale=1.0,
+    user-scalable=no">
+
+    <link rel="stylesheet" href="css/a.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile.icons.min.css">
+</head>
+<body>
+<!-- 페이지 하나는 home div로 감싸줘야 한다. data-role 은 page로 해 줘야 한다. (==home page) -->
+<div id="home" data-role="page">
+    <!-- 하나의 페이지 내부는 header, content, footer로 구성한다. data-role을 설정해주면 된다. -->
+    <div data-role="header" data-position="fixed"><!-- header와 footer를 고정하기 위해서 data-positon을 fixed로 준다. -->
+        <h1>Header</h1>
+    </div>
+    <div data-role="content">
+        <h1>첫 번째 Content</h1>
+        <!--
+            1. list를 사용하기 위해 data-role을 listview로 설정.
+            2. 각각의 목록을 터치하기 위해 anchor (<a>) tag 사용
+            3. 구분자 data-role="list-divider" 사용
+            4. 검색을 하기 위해 filter를 붙일 수 있다.
+            5. split button을 추가 할 수 있다.
+            단순히 <a> tag를 하나 더 이용하면 된다.
+            6. split button의 아이콘을 바꿀 수 있다.(data-split-icon="")
+            7. Thumbnail 이미지를 추가할 수 있다. 크기는 80x80. class="ui-li-icon"
+            8. 버블카운트 사용 가능 (span class='ui-li-count' (ex)확인안한 게시글 10개)
+        -->
+        <ul data-role="listview" data-inset="true" data-filter="true" data-split-icon="delete">
+            <li data-role="list-divider">장난감</li><!-- 항목 구분자 -->
+            <li><a href="#"><img src="images/facebook-icon-18x18.png" class="ui-li-icon">아이템 A</a></li>
+            <li><a href="#">아이템 B</a><a href="삭제"></a></li>
+            <li data-role="list-divider">식료품</li>
+            <li><a href="#">아이템 C<span class="ui-li-count">10</span></a></li>
+            <li>
+                <a href="#">
+                    <img src="images/80x80.jpg">
+                    <h3>project 수업</h3>
+                    <p>jQuery Mobile을 이용한 프로젝트</p>
+                    <p>수업시간 09:00~10:00</p>
+                    <p class="ui-li-aside">강의실 : 202호</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#" data-icon="home">홈페이지</a></li>
+                <li><a href="#" data-icon="gear">설정</a></li>
+                <li><a href="#" data-icon="star">찾아오시는길</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</body>
+</html>

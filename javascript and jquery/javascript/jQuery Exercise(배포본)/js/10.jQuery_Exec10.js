@@ -1,0 +1,3 @@
+function removeDiv() {
+    $("#targetDiv").empty();
+}

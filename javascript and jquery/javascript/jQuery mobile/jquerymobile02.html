@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ThemeRoller Test</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,
+          maximum-scale=1.0, minimum-scale=1.0,
+          user-scalable=no">
+    <link rel="stylesheet" href="themes/A.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        .ui-icon-myIcon:after {
+            background-image: url("themes/images/facebook-icon-18x18.png");
+        }
+    </style>
+</head>
+<body>
+<div id="home" data-role="page">
+    <div data-role="header" data-position="fixed">
+        <h1>header</h1>
+        <a href="login.html" class="ui-btn" data-transition="slide">로그인</a>
+    </div>
+    <div data-role="content">
+        <!--
+            content에 버튼을 추가할 때도 역시 <a></a> 태그를 사용한다. 단, data-role=button 이 추가되어야 한다.
+            1. 버튼의 width가 버튼을 포함한 elemement를 꽉 채우도록 되어있다. data-inline=true 를 설정하면 버튼글씨를
+            감싸는 크기의 버튼으로 만들 수 있다. class="ui-btn"은 삭제해야 한다.
+            2. 버튼에는 아이콘을 붙일 수 있다.
+            3. 아이콘의 위치도 조절할 수 있다.
+            4. 사용자의 커스텀 아이콘도 넣을 수 있다. (단, 사이즈가 18x18이어야 깨지지 않는다.)
+                style을 설정해줘야 한다.
+            5. 버튼 여러개를 자연스럽게 묶을 수 있다.
+         -->
+        <a href="#" data-role="button" data-inline="true" data-icon="myIcon" data-iconpos="right">버튼</a>
+
+        <!-- Button Group Example -->
+        <div data-role="controlgroup" data-type="vertical">
+            <a href="#" data-role="button">메뉴 1</a>
+            <a href="#" data-role="button">메뉴 2</a>
+            <a href="#" data-role="button">메뉴 3</a>
+            <a href="#" data-role="button">메뉴 4</a>
+            <a href="#" data-role="button">메뉴 5</a>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <h1>footer</h1>
+    </div>
+</div>
+</body>
+</html>

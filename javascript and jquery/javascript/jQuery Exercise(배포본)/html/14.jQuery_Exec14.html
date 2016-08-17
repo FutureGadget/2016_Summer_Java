@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>jQuery 연습문제</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <style>
+        #targetDiv {
+            width : 300px;
+            height : 300px;
+            background-color : yellowgreen;
+            padding : 20px 20px;
+            margin : 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>아래의 버튼 클릭 시 DIV안에 h2를 제외한 다른 모든 태그를 삭제하세요</h1>
+    <input type="button" value="h2를 제외하고 모두 삭제" onclick="deleteTag()">
+    <div id="targetDiv">
+        <h1>여기는 h1입니다.</h1>
+        <h2>여기는 h2입니다.</h2>
+        <h3>여기는 h3입니다.</h3>
+        <h4>여기는 h4입니다.</h4>
+        <h5>여기는 h5입니다.</h5>
+    </div>
+    <script src="../js/14.jQuery_Exec14.js"></script>
+</body>
+</html>

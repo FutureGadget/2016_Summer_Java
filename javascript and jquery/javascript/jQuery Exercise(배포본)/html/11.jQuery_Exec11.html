@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>jQuery 연습문제</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="../js/11.jQuery_Exec11.js"></script>
+    <style>
+        #targetDiv {
+            width : 400px;
+            height : 300px;
+            background-color : yellowgreen;
+            padding : 20px 20px;
+            margin : 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>아래의 버튼 클릭 시 DIV안에 몇개의 image가 존재하는지 alert으로 출력하세요</h1>
+    <input type="button" value="DIV안의 image 개수 출력" onclick="countChild()">
+    <div id="targetDiv">
+        <img src="../img/yuna.png" width="100">
+        <br>
+        <img src="../img/iu.png" width="100">
+        <select>
+            <option>서울</option>
+            <option>부산</option>
+        </select>
+        <img src="../img/suzi.png" width="100">
+        <div>내부 DIV 1입니다.!!</div>
+    </div>
+</body>
+</html>

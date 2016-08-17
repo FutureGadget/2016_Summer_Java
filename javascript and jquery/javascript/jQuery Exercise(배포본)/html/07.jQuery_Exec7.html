@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>jQuery 연습문제</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="../js/07.jQuery_Exec7.js"></script>
+    <style>
+        #sourceDiv {
+            width : 300px;
+            height : 150px;
+            background-color : yellow;
+            padding : 20px 20px;
+            margin : 30px;
+        }
+        #targetDiv {
+            width : 300px;
+            height : 150px;
+            background-color : darkgrey;
+            padding : 20px 20px;
+            margin : 30px;
+        }
+        .innerDiv {
+            width : 200px;
+            height : 30px;
+            background-color : greenyellow;
+            margin : 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>아래의 버튼 클릭 시 첫번째 DIV 내부의 DIV를 두번째 DIV로 이동시키세요</h1>
+    <input type="button" value="DIV 이동" onclick="divMove()">
+    <div id="sourceDiv">
+        <div class="innerDiv">내부 DIV</div>
+    </div>
+    <div id="targetDiv">
+
+    </div>
+</body>
+</html>

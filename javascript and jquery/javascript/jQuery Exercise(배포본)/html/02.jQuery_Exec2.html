@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>jQuery 연습문제</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="../js/02.jQuery_Exec2.js"></script>
+    <style>
+        #targetDiv {
+            width : 300px;
+            height : 100px;
+            background-color : yellow;
+            padding : 20px 20px;
+            margin : 30px;
+        }
+        span {
+            width : 200px;
+            background-color : greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>아래의 버튼 클릭 시 div 영역안의 span 태그의 내용을 다른 내용으로 바꾸세요</h1>
+    <input type="button" value="내용 바꾸기" onclick="changeText()">
+    <div id="targetDiv">
+        <span>이것은 소리없는 아우성!!</span>
+    </div>
+</body>
+</html>

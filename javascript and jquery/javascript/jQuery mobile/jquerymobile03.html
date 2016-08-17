@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toolbars</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,
+          maximum-scale=1.0, minimum-scale=1.0,
+          user-scalable=no">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div id="home" data-role="page">
+    <!--
+        Toolbar란 header, footer, navbar와 같이 화면 위 또는 아래에서 언제든지 접근 가능한 메뉴바 또는 상태바를 일컫는다.
+        1. 툴바는 여러 개 삽입 가능하다.
+        2. navbar는 header나 footer 내에 삽입하여 사용하는데, 이름 그대로 네비게이션 바이다...... navbar내에 <a></a>로
+        버튼을 배치하면 명시적으로 controlgroup으로 묶어주지 않아도 수평정렬되어 보기좋게된다. 대신 ul을 사용하여 그루핑해주어야 한다.
+        (navbar > ul > li > a)
+        3. 역시 아이콘 줄 수 있다.(아까 버튼에 아이콘을 줬던 것 처럼 data-icon=""을 사용하면 된다.)
+    -->
+    <div data-role="header">
+        <h1>툴바1</h1>
+    </div>
+    <div data-role="content"></div>
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="home">홈페이지</a>
+                <li><a href="#" data-icon="gear">설정</a></li>
+                <li><a href="#" data-icon="star">찾아오시는 길</a></li></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

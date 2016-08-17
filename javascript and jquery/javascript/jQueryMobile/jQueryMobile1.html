@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- jQuery Mobile 사용하기 위해서 CDN 추가 -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+    <!-- 모바일 환경에 최적화 하기 위해 확대,축소기능 제한 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+    maximum-scale=1.0, minimum-scale=1.0,
+    user-scalable=no">
+
+    <link rel="stylesheet" href="css/a.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile.icons.min.css">
+
+    <!-- 사용자 정의 아이콘 사용하기 위한 css 설정 -->
+    <style>
+        .ui-icon-myIcon:after {
+            background-image: url("images/facebook-icon-18x18.png");
+        }
+    </style>
+</head>
+<body>
+    <!-- 페이지 하나는 home div로 감싸줘야 한다. data-role 은 page로 해 줘야 한다. (==home page) -->
+    <div id="home" data-role="page">
+        <!-- 하나의 페이지 내부는 header, content, footer로 구성한다. data-role을 설정해주면 된다. -->
+        <div data-role="header" data-position="fixed"><!-- header와 footer를 고정하기 위해서 data-positon을 fixed로 준다. -->
+            <h1>Header</h1>
+            <!-- header에는 버튼을 2개까지 추가할 수 있다. -->
+            <!-- 버튼 추가는 anchor tag를 사용한다 -->
+
+            <!-- page 전환을 animation 으로 처리하려면 data-transition 어트리뷰트를 사용하면 된다 -->
+            <!-- page 전환은 어떻게 이루어지나? ajax 로 링크된 html의 내용을 가져와서 현재 화면을 jquery를 이용하여 변경 -->
+            <!-- 즉, Single page application 을 만들 수 있음 -->
+            <!-- 보충설명: header 설정을 하지 않았음에도 페이지 전환시 그대로 남아있다. -->
+            <a href="next.html" data-transition="slide" class="ui-btn">로그인</a> <!-- data-role=button 이 생략되어 있다 -->
+        </div> 
+        <div data-role="content">
+            <h1>첫 번째 Content</h1>
+            <!-- Content 영역에 버튼만들기. anchor 와 data-role=button 사용 -->
+            <a href="#" data-role="button" data-inline="true" data-icon="myIcon" data-iconpos="notext">버튼</a>
+            <!-- 위와 같이 버튼을 만들면 width가 버튼을 포함하고 있는 엘리먼트를 꽉 채움 -->
+            <!-- 버튼의 크기를 글자 수와 일치하게 만드려면? : data-inline=true 로 하면 된다.-->
+            <!-- 방금 class=ui-btn을 삭제했는데 스타일이 겹치면 css 우선순위 규칙에 따라 덮어씌워지므로 안될시 다른 스티일들을
+            지워본다. -->
+            <!-- 아이콘 추가방법 : data-icon-""
+             버튼의 위치도 바꿀 수 있다.
+             data-iconpos="" (top/bottom/left/right)
+            -->
+            <!-- 아이콘 버튼을 만드려면? data-iconpos="notext" 사용 -->
+            <!-- 사용자가 만든 아이콘을 사용하려면? (기본 제공 아이콘 말고) 18x18 픽셀 이미지 필요 -->
+            <!-- 버튼 그룹 만들기 -->
+            <div data-role="controlgroup" data-type="horizontal">
+                <a href="#" data-role="button" data-inline="true">메뉴1</a>
+                <a href="#" data-role="button" data-inline="true">메뉴2</a>
+                <a href="#" data-role="button" data-inline="true">메뉴3</a>
+                <a href="#" data-role="button" data-inline="true">메뉴4</a>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>footer</h1>
+        </div>
+    </div>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</body>
+</html>

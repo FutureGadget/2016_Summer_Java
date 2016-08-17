@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>jQuery 연습문제</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <style>
+        #targetDiv {
+            width : 200px;
+            height : 100px;
+            background-color : yellowgreen;
+            padding : 5px;
+            margin : 10px;
+        }
+        .redColor {
+        	color : red;
+        }
+        .blueColor {
+        	color : blue;
+        }        
+    </style>
+</head>
+<body>
+    <h1>아래의 버튼 클릭 시 select안의 내용을 알파벳 순으로 정렬해서 다시 표현하세요</h1>
+    <input type="button" value="select 정렬" onclick="sortSelect()">
+    <div id="targetDiv">
+        <select size="5">
+            <option class="redColor">bbb</option>
+            <option class="blueColor">eee</option>
+            <option class="blueColor">ccc</option>
+            <option class="blueColor">aaa</option>
+            <option class="redColor">ddd</option>
+        </select>
+    </div>
+    <script src="../js/16.jQuery_Exec16.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <!-- page 전환을 animation 으로 처리하려면 data-transition 어트리뷰트를 사용하면 된다 -->
+    <!-- page 전환은 어떻게 이루어지나? ajax 로 링크된 html의 내용을 가져와서 현재 화면을 jquery를 이용하여 변경 -->
+    <!-- 즉, Single page application 을 만들 수 있음 -->
+    <!-- 보충설명: header 설정을 하지 않았음에도 페이지 전환시 그대로 남아있다. -->
+</head>
+<body>
+<div id="home" data-role="page">
+    <div data-role="header" data-position="fixed">
+        <h1>로그인페이지 Header</h1>
+        <!-- 뒤로가기 버튼은 이전 페이지의 링크를 몰라도 jquery mobile library 에서 제공하는 뒤로가기 버튼을 사용하면
+        쉽게 구현이 가능하다.
+         -->
+        <a href="#" class="ui-btn" data-rel="back" data-transition="slide">뒤로가기</a>
+    </div>
+    <div data-role="content"></div>
+    <div data-role="footer" data-position="fixed">
+        <h1>로그인페이지 Footer</h1>
+    </div>
+</div>
+</body>
+</html>

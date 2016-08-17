@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>jQuery 연습문제</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="../js/05.jQuery_Exec5.js"></script>
+    <style>
+        #targetDiv {
+            width : 300px;
+            height : 150px;
+            background-color : yellow;
+            padding : 20px 20px;
+            margin : 30px;
+        }
+        .innerDiv {
+            width : 200px;
+            height : 30px;
+            background-color : greenyellow;
+            margin : 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>아래의 버튼 클릭 시 두번째 내부 DIV안의 버튼을 클릭이 불가능하게 바꾸세요</h1>
+    <input type="button" value="상태변경" onclick="changeStatus()">
+    <div id="targetDiv">
+        <div class="innerDiv">내부 DIV</div>
+        <div class="innerDiv">
+            <input type="button" value="이 버튼이 클릭안되게 변경">
+        </div>
+        <div class="innerDiv">내부 DIV</div>
+    </div>
+</body>
+</html>

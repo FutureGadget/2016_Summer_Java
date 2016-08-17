@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example 1</title>
+    <!-- 모바일 환경에 최적화 하기 위해 확대,축소기능 제한 -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,
+          maximum-scale=1.0, minimum-scale=1.0,
+          user-scalable=no">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <!-- jQuery mobile 페이지 구성 기본 -->
+    <!-- div id=home, data-role=page 로 전체를 감싸야 한다 -->
+    <div id="home" data-role="page">
+        <!-- 페이지는 크게 세 부분으로 구성된다 -->
+        <!-- 스크롤이 생기면 header와 footer가 화면밖으로 밀려나는것을 방지하기 위해 data-position=fixed를 준다 -->
+        <!-- header와 footer가 content를 가리고 있을 경우 content의 빈 공간을 클릭하면 autohide된다 -->
+        <div data-role="header" data-position="fixed">
+            <!-- header에는 버튼을 2개까지 추가할 수 있다! -->
+            <!--
+                버튼 추가는 <button></button>으로 하는 것이 아니고 <a href=""></a> 태그를 활용한다.
+                앞으로 jquery mobile 로 추가할 버튼들은 모두 anchor(<a>)태그를 사용하므로 참고하자.
+                <button> 대신 <a>를 사용하므로 class 어트리뷰트값을 ui-btn 으로 준다.
+            -->
+            <h1>Header</h1>
+            <a href="login.html" class="ui-btn" data-transition="slide">로그인</a>
+        </div>
+        <div data-role="content">
+
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>Footer</h1>
+        </div>
+    </div>
+</body>
+</html>
