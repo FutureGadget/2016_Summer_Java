@@ -1,7 +1,7 @@
-# 2016_Summer_Java
-Network / Thread / Web programming using Java
+# 2016_Summer_Java_and_Web_study
+###Network / Thread / Web programming (servlet / jsp) / MVC pattern
 <hr>
-<h1>1. 방 하나짜리 채팅방</h1>
+<h1>1. 방 하나짜리 채팅방 (java thread / network programming)</h1>
 <h2>== Server Side ==</h2>
 <ol>
     <li>ConnectionServer
