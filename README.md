@@ -63,3 +63,37 @@ Client Thread를 위한 클래스
     </li>
 </ul>
 <hr>
+#Jquery Mobile 101
+##1. jquery mobile 기본 페이지구성
+  1. cdn 추가
+  2. 모바일 환경을 위한 meta tag설정
+  3. jquery mobile의 어트리뷰트들 소개
+  4. home page 구성
+
+##2. 새로운 페이지 만들기
+  1. 링크
+  2. 뒤로가기
+  3. 페이지 전환 특성(data-transition)
+
+##3. 테마
+  1. ThemeRoller사용
+
+##4. 버튼
+  1. content에 버튼 추가
+  2. 버튼 크기
+  3. 버튼아이콘
+  4. 아이콘 위치
+  5. 사용자 정의 아이콘 사용(css이용)
+  6. 컨트롤그룹(버튼 그룹 예시)
+
+##5. 툴바
+  1. 툴바는 여러개 넣을 수 있음.
+  2. data-position="fixed" 어트리뷰트 설명
+  3. 툴바의 종류 : header/footer/navbar
+
+##6. 리스트뷰
+  1. 리스트 만들기
+  2. 리스트 항목을 버튼처럼 사용하기
+  3. 리스트에 thumbnail 심기
+  4. 리스트에 split button 넣기
+  5. 리스트에 p,h태그 넣기
